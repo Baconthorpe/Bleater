@@ -23,6 +23,8 @@
 		0FEEBEDC19CBC407001AB3F8 /* ZAParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBEDB19CBC407001AB3F8 /* ZAParseClient.m */; };
 		0FEEBEDF19CBC498001AB3F8 /* ZAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBEDE19CBC498001AB3F8 /* ZAManager.m */; };
 		0FEEBEE219CBE00B001AB3F8 /* ZAComposeBleatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBEE119CBE00B001AB3F8 /* ZAComposeBleatVC.m */; };
+		0FEEBEE819CBE31E001AB3F8 /* Bleat+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBEE719CBE31E001AB3F8 /* Bleat+Methods.m */; };
+		0FEEBEEB19CBE61B001AB3F8 /* Bleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBEEA19CBE61B001AB3F8 /* Bleat.m */; };
 		77695FCEBD8F451C85C14341 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E67433570C424CBF02520F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,10 @@
 		0FEEBEDE19CBC498001AB3F8 /* ZAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAManager.m; sourceTree = "<group>"; };
 		0FEEBEE019CBE00A001AB3F8 /* ZAComposeBleatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAComposeBleatVC.h; sourceTree = "<group>"; };
 		0FEEBEE119CBE00B001AB3F8 /* ZAComposeBleatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAComposeBleatVC.m; sourceTree = "<group>"; };
+		0FEEBEE619CBE31E001AB3F8 /* Bleat+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bleat+Methods.h"; sourceTree = "<group>"; };
+		0FEEBEE719CBE31E001AB3F8 /* Bleat+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Bleat+Methods.m"; sourceTree = "<group>"; };
+		0FEEBEE919CBE61B001AB3F8 /* Bleat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bleat.h; sourceTree = "<group>"; };
+		0FEEBEEA19CBE61B001AB3F8 /* Bleat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bleat.m; sourceTree = "<group>"; };
 		24E67433570C424CBF02520F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F68D2B63D849799A4F3BDD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +169,10 @@
 				0FEEBEDB19CBC407001AB3F8 /* ZAParseClient.m */,
 				0FEEBEDD19CBC498001AB3F8 /* ZAManager.h */,
 				0FEEBEDE19CBC498001AB3F8 /* ZAManager.m */,
+				0FEEBEE919CBE61B001AB3F8 /* Bleat.h */,
+				0FEEBEEA19CBE61B001AB3F8 /* Bleat.m */,
+				0FEEBEE619CBE31E001AB3F8 /* Bleat+Methods.h */,
+				0FEEBEE719CBE31E001AB3F8 /* Bleat+Methods.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FEEBED619CBC2D6001AB3F8 /* ZAConstants.m in Sources */,
+				0FEEBEE819CBE31E001AB3F8 /* Bleat+Methods.m in Sources */,
+				0FEEBEEB19CBE61B001AB3F8 /* Bleat.m in Sources */,
 				0FEEBEA119CBBC61001AB3F8 /* Bleater.xcdatamodeld in Sources */,
 				0FEEBEC919CBBEEF001AB3F8 /* ZABleatCell.m in Sources */,
 				0FEEBED219CBBF72001AB3F8 /* ZADataStore.m in Sources */,

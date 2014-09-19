@@ -7,7 +7,14 @@
 //
 
 #import "ZADataStore.h"
+#import "ZAConstants.h"
 #import <CoreData/CoreData.h>
+
+@interface ZADataStore ()
+
+@property (strong, nonatomic, readwrite) NSFetchedResultsController *bleatsFRC;
+
+@end
 
 @implementation ZADataStore
 
@@ -31,7 +38,27 @@
     return _shared;
 }
 
+#pragma mark - Property Lazy Instantiation
 
+- (NSFetchedResultsController *)bleatsFRC
+{
+    if (!_bleatsFRC)
+    {
+        NSFetchRequest *bleatsFetch = [[NSFetchRequest alloc] initWithEntityName:BLEAT_OBJECT_ENTITY_NAME];
+        bleatsFetch.fetchBatchSize = STANDARD_FETCH_BATCH_SIZE;
+        
+        NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:BLEAT_DATE_PROPERTY_NAME ascending:NO];
+        bleatsFetch.sortDescriptors = @[sortByDate];
+        
+        _bleatsFRC = [[NSFetchedResultsController alloc] initWithFetchRequest:bleatsFetch
+                                                         managedObjectContext:self.managedObjectContext
+                                                           sectionNameKeyPath:nil
+                                                                    cacheName:BLEATS_CACHE_NAME];
+        [_bleatsFRC performFetch:nil];
+    }
+    
+    return _bleatsFRC;
+}
 
 #pragma mark - Core Data stack
 

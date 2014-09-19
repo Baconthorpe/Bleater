@@ -11,6 +11,7 @@
 @class NSManagedObjectContext;
 @class NSManagedObjectModel;
 @class NSPersistentStoreCoordinator;
+@class NSFetchedResultsController;
 
 @interface ZADataStore : NSObject
 
@@ -18,6 +19,9 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+// Fetched Results Controller
+@property (strong, nonatomic, readonly) NSFetchedResultsController *bleatsFRC;
 
 // Singleton Method
 + (instancetype) singleton;

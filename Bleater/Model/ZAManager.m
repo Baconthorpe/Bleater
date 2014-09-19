@@ -7,6 +7,8 @@
 //
 
 #import "ZAManager.h"
+#import "ZADataStore.h"
+#import "ZAParseClient.h"
 
 @implementation ZAManager
 
@@ -21,6 +23,29 @@
     });
     
     return _shared;
+}
+
+#pragma mark - Parse Functionality
+
+- (void) getAllBleatsAndStoreThemWithSuccess: (void (^)(NSDictionary *))success
+                                     failure: (void (^)(NSString *))failure
+{
+    [[ZAParseClient singleton] getBleatsWithSuccess:^(NSDictionary *responseDictionary) {
+        
+        [self storeBleatsFromDictionary:responseDictionary];
+        
+        success(responseDictionary);
+        
+    } failure:^(NSString *error) {
+        
+        failure(error);
+        
+    }];
+}
+
+- (void) storeBleatsFromDictionary: (NSDictionary *)bleatsDictionary
+{
+    
 }
 
 @end
