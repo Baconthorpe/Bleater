@@ -19,6 +19,9 @@
 		0FEEBECF19CBBF41001AB3F8 /* ZABleatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBECE19CBBF41001AB3F8 /* ZABleatDetailVC.m */; };
 		0FEEBED219CBBF72001AB3F8 /* ZADataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBED119CBBF72001AB3F8 /* ZADataStore.m */; };
 		0FEEBED619CBC2D6001AB3F8 /* ZAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBED519CBC2D6001AB3F8 /* ZAConstants.m */; };
+		0FEEBED919CBC3C0001AB3F8 /* ZAPrivateCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBED819CBC3C0001AB3F8 /* ZAPrivateCredentials.m */; };
+		0FEEBEDC19CBC407001AB3F8 /* ZAParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBEDB19CBC407001AB3F8 /* ZAParseClient.m */; };
+		0FEEBEDF19CBC498001AB3F8 /* ZAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEBEDE19CBC498001AB3F8 /* ZAManager.m */; };
 		77695FCEBD8F451C85C14341 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E67433570C424CBF02520F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,12 @@
 		0FEEBED119CBBF72001AB3F8 /* ZADataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZADataStore.m; sourceTree = "<group>"; };
 		0FEEBED419CBC2D6001AB3F8 /* ZAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAConstants.h; sourceTree = "<group>"; };
 		0FEEBED519CBC2D6001AB3F8 /* ZAConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAConstants.m; sourceTree = "<group>"; };
+		0FEEBED719CBC3C0001AB3F8 /* ZAPrivateCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAPrivateCredentials.h; sourceTree = "<group>"; };
+		0FEEBED819CBC3C0001AB3F8 /* ZAPrivateCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAPrivateCredentials.m; sourceTree = "<group>"; };
+		0FEEBEDA19CBC407001AB3F8 /* ZAParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAParseClient.h; sourceTree = "<group>"; };
+		0FEEBEDB19CBC407001AB3F8 /* ZAParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAParseClient.m; sourceTree = "<group>"; };
+		0FEEBEDD19CBC498001AB3F8 /* ZAManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAManager.h; sourceTree = "<group>"; };
+		0FEEBEDE19CBC498001AB3F8 /* ZAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAManager.m; sourceTree = "<group>"; };
 		24E67433570C424CBF02520F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F68D2B63D849799A4F3BDD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +156,10 @@
 			children = (
 				0FEEBED019CBBF72001AB3F8 /* ZADataStore.h */,
 				0FEEBED119CBBF72001AB3F8 /* ZADataStore.m */,
+				0FEEBEDA19CBC407001AB3F8 /* ZAParseClient.h */,
+				0FEEBEDB19CBC407001AB3F8 /* ZAParseClient.m */,
+				0FEEBEDD19CBC498001AB3F8 /* ZAManager.h */,
+				0FEEBEDE19CBC498001AB3F8 /* ZAManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +189,8 @@
 			children = (
 				0FEEBED419CBC2D6001AB3F8 /* ZAConstants.h */,
 				0FEEBED519CBC2D6001AB3F8 /* ZAConstants.m */,
+				0FEEBED719CBC3C0001AB3F8 /* ZAPrivateCredentials.h */,
+				0FEEBED819CBC3C0001AB3F8 /* ZAPrivateCredentials.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -328,8 +343,11 @@
 				0FEEBEC919CBBEEF001AB3F8 /* ZABleatCell.m in Sources */,
 				0FEEBED219CBBF72001AB3F8 /* ZADataStore.m in Sources */,
 				0FEEBE9E19CBBC61001AB3F8 /* AppDelegate.m in Sources */,
+				0FEEBEDC19CBC407001AB3F8 /* ZAParseClient.m in Sources */,
+				0FEEBED919CBC3C0001AB3F8 /* ZAPrivateCredentials.m in Sources */,
 				0FEEBEC619CBBE64001AB3F8 /* ZAFeedVC.m in Sources */,
 				0FEEBECF19CBBF41001AB3F8 /* ZABleatDetailVC.m in Sources */,
+				0FEEBEDF19CBC498001AB3F8 /* ZAManager.m in Sources */,
 				0FEEBE9B19CBBC61001AB3F8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
