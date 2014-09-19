@@ -73,4 +73,38 @@
     }
 }
 
+- (void) postAndStoreBleatWithContent: (NSString *)content
+                              success: (void (^)(NSDictionary *))success
+                              failure: (void (^)(NSString *))failure
+{
+    [[ZAParseClient singleton] postBleatWithContent:content success:^(NSDictionary *confirmationDictionary) {
+        
+        [self storeNewlyPostedBleatWithConfirmationDictionary:confirmationDictionary content:content];
+        
+        success(confirmationDictionary);
+        
+    } failure:^(NSString *error) {
+        
+        failure(error);
+        
+    }];
+}
+
+- (void) storeNewlyPostedBleatWithConfirmationDictionary: (NSDictionary *)confirmationDictionary
+                                                 content: (NSString *)content
+{
+    NSString *uniqueID = confirmationDictionary[PARSE_BLEAT_PROPERTY_KEY_ID];
+    
+    NSString *rawDate = confirmationDictionary[PARSE_BLEAT_PROPERTY_KEY_CREATED_AT];
+    NSString *clippedDate = [rawDate substringToIndex:CLIPPING_INDEX_OF_DATE];
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    [formatter setDateFormat:PARSE_DATE_FORMAT];
+    NSDate *decodedDate = [formatter dateFromString:clippedDate];
+    
+    [Bleat bleatWithContent:content
+                  createdAt:decodedDate
+                   uniqueID:uniqueID
+                  inContext:[ZADataStore singleton].managedObjectContext];
+}
+
 @end
