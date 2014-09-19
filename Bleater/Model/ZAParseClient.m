@@ -56,6 +56,8 @@
 
 #pragma mark - Parse Functions
 
+// This method calls on Parse to return all objects of the Bleat class.
+// Its success block provides a dictionary that conveys this data.
 - (void) getBleatsWithSuccess: (void (^)(NSDictionary *))success
                       failure: (void (^)(NSString *))failure
 {    
@@ -71,6 +73,10 @@
     }];
 }
 
+// This method calls Parse to create a new Bleat object.
+// Its success block provides Parse's confirmation response,
+// which is the new objects's createdAt date and its unique
+// identifier string.
 - (void) postBleatWithContent: (NSString *)content
                       success: (void (^)(NSDictionary *))success
                       failure: (void (^)(NSString *))failure

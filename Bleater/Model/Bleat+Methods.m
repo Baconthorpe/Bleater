@@ -13,6 +13,8 @@
 
 #pragma mark - Instantiation
 
+// This method produces a Bleat object according to provided
+// details. It makes storing Bleats quick and easy.
 + (instancetype) bleatWithContent: (NSString *)contentString
                         createdAt: (NSDate *)createdAt
                          uniqueID: (NSString *)uniqueID

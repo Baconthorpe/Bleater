@@ -50,6 +50,8 @@
     [ZADataStore singleton].bleatsFRC.delegate = self;
 }
 
+// This method is used as the initial get to update
+// local storage with all the Bleats.
 - (void) getBleats
 {
     [[ZAManager singleton] getAllBleatsAndStoreThemWithSuccess:^(NSDictionary *bleatsDictionary) {
@@ -62,6 +64,10 @@
 }
 
 #pragma mark - Table View Methods
+
+// These methods configure the feed table to populate
+// based on the Bleats fetched results controller in
+// the data store. It will update the table automatically.
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -98,6 +104,9 @@
 }
 
 #pragma mark - Fetched Results Controller Methods
+
+// This is boilerplate for making the fetched results
+// controller delegate relationship work.
 
 - (void)controller:(NSFetchedResultsController *)controller
   didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
@@ -159,6 +168,9 @@
 
 #pragma mark - Detail View
 
+// This method could later be expanded to address multiple
+// segue situations, but for now it focuses on the segue to
+// the Bleat detail view controller.
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.destinationViewController class] == [ZABleatDetailVC class])
@@ -169,10 +181,4 @@
     }
 }
 
-#pragma mark - Actions
-
-- (IBAction)writeBleatButtonPressed:(id)sender
-{
-    
-}
 @end

@@ -69,6 +69,8 @@
 
 #pragma mark - Actions
 
+// This method deals with user wanting to cancel composition
+// of a new Bleat.
 - (IBAction)backButtonPressed:(id)sender
 {
     [self.view endEditing:YES];

@@ -10,7 +10,8 @@
 
 @implementation ZAConstants
 
-// Parse Constants
+#pragma mark - Parse Constants
+
 NSString *const PARSE_BASE_URL = @"https://api.parse.com";
 NSString *const PARSE_BLEAT_CONTENT_KEY = @"content";
 NSString *const PARSE_POST_BLEAT_URL_EXTENSION = @"/1/classes/bleat";
@@ -23,7 +24,8 @@ NSString *const PARSE_BLEAT_PROPERTY_KEY_ID = @"objectId";
 
 NSString *const PARSE_DATE_FORMAT = @"yyyy-MM-dd";
 
-// Core Data Constants
+#pragma mark - Core Data Constants
+
 NSInteger const STANDARD_FETCH_BATCH_SIZE = 20;
 NSString *const BLEAT_OBJECT_ENTITY_NAME = @"Bleat";
 NSString *const BLEAT_DATE_PROPERTY_NAME = @"dateCreated";
@@ -31,17 +33,21 @@ NSString *const BLEATS_CACHE_NAME = @"bleatsCache";
 
 NSString *const UNIQUE_ID_PREDICATE_FORMAT = @"uniqueID == %@";
 
-// Manager Constants
+#pragma mark - Manager Constants
+
 NSInteger const CLIPPING_INDEX_OF_DATE = 10;
 
-// IB Identifiers
+#pragma mark - Interface Builder Identifiers
+
 NSString *const BLEAT_CELL_IDENTIFIER = @"bleatCell";
 
-// UI Constants
+#pragma mark - UI Constants
+
 float const BLEAT_BACKDROP_CORNER_RADIUS = 10.0;
 float const HEIGHT_FOR_FEED_ROW = 80.0;
 
-// Alert View Constants
+#pragma mark - Alert View Constants
+
 NSString *const ALERT_TITLE = @"Internet Error";
 NSString *const ALERT_MESSAGE = @"Sorry - we were unable to connect to the server for some reason.";
 NSString *const ALERT_CANCEL = @"OK";

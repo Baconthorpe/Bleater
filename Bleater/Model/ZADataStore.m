@@ -40,6 +40,9 @@
 
 #pragma mark - Property Lazy Instantiation
 
+// Here's lazy instantiation for a fetched results controller for Bleat objects.
+// It properly sets up the fetched results controller so that it will be
+// useful going forward.
 - (NSFetchedResultsController *)bleatsFRC
 {
     if (!_bleatsFRC)
@@ -61,6 +64,8 @@
 }
 
 #pragma mark - Core Data stack
+
+// This is boilerplate to make the core data functionality work.
 
 - (void)saveContext
 {

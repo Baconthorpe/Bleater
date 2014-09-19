@@ -30,6 +30,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// This is a basic setup method.
 - (void) setUpAppearance
 {
     self.bleatContentLabel.text = self.bleat.content;

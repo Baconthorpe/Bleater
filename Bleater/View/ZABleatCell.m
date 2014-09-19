@@ -31,6 +31,9 @@
     // Configure the view for the selected state
 }
 
+// This method sets up a Bleat cell properly with relevant
+// details. It should be called whenever a new Bleat cell is being
+// made.
 - (void) configureForContent:(NSString *)content
 {
     self.bleatContentLabel.text = content;

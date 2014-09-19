@@ -29,6 +29,9 @@
 
 #pragma mark - Parse Functionality
 
+// This method uses the Parse client to get Bleat data, then,
+// if this call was successful, stores this data using the
+// data store.
 - (void) getAllBleatsAndStoreThemWithSuccess: (void (^)(NSDictionary *))success
                                      failure: (void (^)(NSString *))failure
 {
@@ -45,6 +48,7 @@
     }];
 }
 
+// This method helps the method above.
 - (void) storeBleatsFromDictionary: (NSDictionary *)bleatsDictionary
 {
     for (NSDictionary *singleBleatDictionary in bleatsDictionary[PARSE_RESULTS_KEY]) {
@@ -52,6 +56,7 @@
     }
 }
 
+// This method helps the method above.
 - (void) storeSingleBleatFromDictionary: (NSDictionary *)bleatDictionary
 {
     NSString *uniqueID = bleatDictionary[PARSE_BLEAT_PROPERTY_KEY_ID];
@@ -73,6 +78,9 @@
     }
 }
 
+// This method uses the Parse client to create a new Bleat object
+// in the database and, if that action is successful, saves a local
+// copy of the object with the data store.
 - (void) postAndStoreBleatWithContent: (NSString *)content
                               success: (void (^)(NSDictionary *))success
                               failure: (void (^)(NSString *))failure
@@ -90,6 +98,7 @@
     }];
 }
 
+// This method helps the method above.
 - (void) storeNewlyPostedBleatWithConfirmationDictionary: (NSDictionary *)confirmationDictionary
                                                  content: (NSString *)content
 {
