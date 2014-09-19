@@ -39,7 +39,7 @@
     if (!_sessionManager)
     {
         _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:PARSE_BASE_URL]];
-        _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+        [self setUpSessionManager];
     }
     
     return _sessionManager;
@@ -58,7 +58,7 @@
 
 - (void) getBleatsWithSuccess: (void (^)(NSDictionary *))success
                       failure: (void (^)(NSString *))failure
-{
+{    
     [self.sessionManager GET:PARSE_GET_BLEATS_URL_EXTENSION parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
         success(responseObject);

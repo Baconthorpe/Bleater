@@ -155,4 +155,16 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark - Duplicate Check
+
+- (BOOL) contextHasBleatOfUniqueID: (NSString *)uniqueID
+{
+    NSFetchRequest *uniqueIDMatch = [NSFetchRequest fetchRequestWithEntityName:BLEAT_OBJECT_ENTITY_NAME];
+    
+    NSPredicate *uniqueIDSearch = [NSPredicate predicateWithFormat:(UNIQUE_ID_PREDICATE_FORMAT),uniqueID];
+    uniqueIDMatch.predicate = uniqueIDSearch;
+    
+    return [[self.managedObjectContext executeFetchRequest:uniqueIDMatch error:nil] count];
+}
+
 @end

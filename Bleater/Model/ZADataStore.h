@@ -30,4 +30,7 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+// Duplicate Check
+- (BOOL) contextHasBleatOfUniqueID: (NSString *)uniqueID;
+
 @end

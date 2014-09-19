@@ -9,6 +9,8 @@
 #import "ZAManager.h"
 #import "ZADataStore.h"
 #import "ZAParseClient.h"
+#import "ZAConstants.h"
+#import "Bleat+Methods.h"
 
 @implementation ZAManager
 
@@ -45,7 +47,30 @@
 
 - (void) storeBleatsFromDictionary: (NSDictionary *)bleatsDictionary
 {
+    for (NSDictionary *singleBleatDictionary in bleatsDictionary[PARSE_RESULTS_KEY]) {
+        [self storeSingleBleatFromDictionary:singleBleatDictionary];
+    }
+}
+
+- (void) storeSingleBleatFromDictionary: (NSDictionary *)bleatDictionary
+{
+    NSString *uniqueID = bleatDictionary[PARSE_BLEAT_PROPERTY_KEY_ID];
     
+    if (![[ZADataStore singleton] contextHasBleatOfUniqueID:uniqueID])
+    {
+        NSString *content = bleatDictionary[PARSE_BLEAT_CONTENT_KEY];
+        
+        NSString *rawDate = bleatDictionary[PARSE_BLEAT_PROPERTY_KEY_CREATED_AT];
+        NSString *clippedDate = [rawDate substringToIndex:CLIPPING_INDEX_OF_DATE];
+        NSDateFormatter *formatter = [NSDateFormatter new];
+        [formatter setDateFormat:PARSE_DATE_FORMAT];
+        NSDate *decodedDate = [formatter dateFromString:clippedDate];
+        
+        [Bleat bleatWithContent:content
+                      createdAt:decodedDate
+                       uniqueID:uniqueID
+                      inContext:[ZADataStore singleton].managedObjectContext];
+    }
 }
 
 @end
