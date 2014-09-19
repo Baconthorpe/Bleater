@@ -20,9 +20,6 @@
 // Feed Table
 @property (weak, nonatomic) IBOutlet UITableView *feedTable;
 
-// Write Bleat Button
-- (IBAction)writeBleatButtonPressed:(id)sender;
-
 @end
 
 @implementation ZAFeedVC

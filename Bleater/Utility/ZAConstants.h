@@ -44,7 +44,6 @@ extern NSInteger const CLIPPING_INDEX_OF_DATE;
 extern NSString *const BLEAT_CELL_IDENTIFIER;
 
 // UI Constants
-extern float const BLEAT_BACKDROP_CORNER_RADIUS;
 extern float const HEIGHT_FOR_FEED_ROW;
 
 // Alert View Constants

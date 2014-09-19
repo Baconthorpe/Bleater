@@ -43,7 +43,6 @@ NSString *const BLEAT_CELL_IDENTIFIER = @"bleatCell";
 
 #pragma mark - UI Constants
 
-float const BLEAT_BACKDROP_CORNER_RADIUS = 10.0;
 float const HEIGHT_FOR_FEED_ROW = 80.0;
 
 #pragma mark - Alert View Constants

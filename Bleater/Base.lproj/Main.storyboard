@@ -70,7 +70,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="writeBleatButtonPressed:" destination="T9v-yV-IIW" eventType="touchUpInside" id="RTK-6M-dJG"/>
                                     <segue destination="U8T-Na-SIL" kind="presentation" id="2aB-7d-3R3"/>
                                 </connections>
                             </button>
@@ -176,7 +175,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bleat Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yB3-Vl-xKX">
-                                <rect key="frame" x="135" y="143" width="330" height="330"/>
+                                <rect key="frame" x="50" y="135" width="500" height="330"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -184,10 +183,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yB3-Vl-xKX" firstAttribute="top" secondItem="xAx-eg-j6t" secondAttribute="bottom" constant="79" id="4UJ-Jd-Gd4"/>
-                            <constraint firstItem="gca-Li-CPy" firstAttribute="top" secondItem="yB3-Vl-xKX" secondAttribute="bottom" constant="127" id="Mqv-6H-Ei3"/>
-                            <constraint firstItem="yB3-Vl-xKX" firstAttribute="leading" secondItem="vZN-Qy-Yxl" secondAttribute="leadingMargin" constant="119" id="bL4-um-qMQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yB3-Vl-xKX" secondAttribute="trailing" constant="119" id="lyh-l7-VZJ"/>
+                            <constraint firstItem="yB3-Vl-xKX" firstAttribute="top" secondItem="xAx-eg-j6t" secondAttribute="bottom" constant="71" id="4UJ-Jd-Gd4"/>
+                            <constraint firstItem="gca-Li-CPy" firstAttribute="top" secondItem="yB3-Vl-xKX" secondAttribute="bottom" constant="135" id="Mqv-6H-Ei3"/>
+                            <constraint firstItem="yB3-Vl-xKX" firstAttribute="leading" secondItem="vZN-Qy-Yxl" secondAttribute="leadingMargin" constant="34" id="bL4-um-qMQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yB3-Vl-xKX" secondAttribute="trailing" constant="34" id="lyh-l7-VZJ"/>
                         </constraints>
                     </view>
                     <connections>

@@ -37,7 +37,6 @@
 - (void) configureForContent:(NSString *)content
 {
     self.bleatContentLabel.text = content;
-    [self.backdropView.layer setCornerRadius:BLEAT_BACKDROP_CORNER_RADIUS];
 }
 
 @end
