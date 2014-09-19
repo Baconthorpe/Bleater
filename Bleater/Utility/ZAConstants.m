@@ -37,4 +37,13 @@ NSInteger const CLIPPING_INDEX_OF_DATE = 10;
 // IB Identifiers
 NSString *const BLEAT_CELL_IDENTIFIER = @"bleatCell";
 
+// UI Constants
+float const BLEAT_BACKDROP_CORNER_RADIUS = 10.0;
+float const HEIGHT_FOR_FEED_ROW = 80.0;
+
+// Alert View Constants
+NSString *const ALERT_TITLE = @"Internet Error";
+NSString *const ALERT_MESSAGE = @"Sorry - we were unable to connect to the server for some reason.";
+NSString *const ALERT_CANCEL = @"OK";
+
 @end

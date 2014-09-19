@@ -17,52 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aof-d9-jOj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aof-d9-jOj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="zeroBleatsCell" id="Si2-sd-bmL">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Si2-sd-bmL" id="Goa-eQ-OJa">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Bleats Exist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6e-um-cn0">
-                                                    <rect key="frame" x="51" y="8" width="498" height="27"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="W6e-um-cn0" firstAttribute="bottom" secondItem="Goa-eQ-OJa" secondAttribute="bottomMargin" id="DbY-Qs-q2t"/>
-                                                <constraint firstItem="W6e-um-cn0" firstAttribute="leading" secondItem="Goa-eQ-OJa" secondAttribute="leadingMargin" constant="43" id="NWC-Vr-p03"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="W6e-um-cn0" secondAttribute="trailing" constant="43" id="lta-23-17B"/>
-                                                <constraint firstItem="W6e-um-cn0" firstAttribute="top" secondItem="Goa-eQ-OJa" secondAttribute="topMargin" id="qGc-KP-n47"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bleatCell" id="vQ3-wh-7mS" customClass="ZABleatCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bleatCell" rowHeight="80" id="vQ3-wh-7mS" customClass="ZABleatCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vQ3-wh-7mS" id="LAI-aj-d5b">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-ex-LI6">
+                                                    <rect key="frame" x="8" y="10" width="584" height="62"/>
+                                                    <color key="backgroundColor" red="0.78823536630000002" green="0.9450981021" blue="0.94901967050000002" alpha="1" colorSpace="deviceRGB"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bleat Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqm-nn-ReY">
-                                                    <rect key="frame" x="8" y="9" width="584" height="26"/>
+                                                    <rect key="frame" x="8" y="9" width="584" height="63"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="yIV-ex-LI6" firstAttribute="leading" secondItem="LAI-aj-d5b" secondAttribute="leadingMargin" id="IUy-9J-3ao"/>
                                                 <constraint firstItem="Lqm-nn-ReY" firstAttribute="trailing" secondItem="LAI-aj-d5b" secondAttribute="trailingMargin" id="QKd-0W-4EG"/>
+                                                <constraint firstItem="yIV-ex-LI6" firstAttribute="trailing" secondItem="LAI-aj-d5b" secondAttribute="trailingMargin" id="QTk-AY-DF5"/>
+                                                <constraint firstItem="yIV-ex-LI6" firstAttribute="bottom" secondItem="LAI-aj-d5b" secondAttribute="bottomMargin" id="Qd4-wX-yE5"/>
+                                                <constraint firstItem="yIV-ex-LI6" firstAttribute="top" secondItem="LAI-aj-d5b" secondAttribute="topMargin" constant="2" id="hKe-FB-Ko4"/>
                                                 <constraint firstItem="Lqm-nn-ReY" firstAttribute="bottom" secondItem="LAI-aj-d5b" secondAttribute="bottomMargin" id="rFJ-Gf-8Bw"/>
                                                 <constraint firstItem="Lqm-nn-ReY" firstAttribute="leading" secondItem="LAI-aj-d5b" secondAttribute="leadingMargin" id="tN5-Uo-G9A"/>
                                                 <constraint firstItem="Lqm-nn-ReY" firstAttribute="top" secondItem="LAI-aj-d5b" secondAttribute="topMargin" constant="1" id="uzh-8H-2H3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backdropView" destination="Lqm-nn-ReY" id="Y8U-Xi-hqf"/>
                                             <outlet property="bleatContentLabel" destination="Lqm-nn-ReY" id="U5y-Me-L97"/>
                                             <segue destination="ZVF-EK-Tz7" kind="show" id="chk-SR-YWc"/>
                                         </connections>
@@ -104,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWv-t6-hWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="290"/>
+            <point key="canvasLocation" x="532" y="289"/>
         </scene>
         <!--Compose BleatVC-->
         <scene sceneID="YGJ-zg-BQT">
@@ -119,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5p-5v-KFx">
-                                <rect key="frame" x="107" y="108" width="386" height="30"/>
+                                <rect key="frame" x="71" y="108" width="458" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4fZ-ST-epK"/>
                                 </constraints>
@@ -154,13 +142,18 @@
                         <constraints>
                             <constraint firstItem="0Zd-vX-QOr" firstAttribute="top" secondItem="RC4-8y-mmw" secondAttribute="bottom" constant="4" id="C9c-EY-kXC"/>
                             <constraint firstItem="dax-gV-hr8" firstAttribute="top" secondItem="RC4-8y-mmw" secondAttribute="bottom" constant="8" id="GqU-wG-YRX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S5p-5v-KFx" secondAttribute="trailing" constant="91" id="Hk0-eZ-wnf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S5p-5v-KFx" secondAttribute="trailing" constant="55" id="Hk0-eZ-wnf"/>
                             <constraint firstAttribute="centerX" secondItem="dax-gV-hr8" secondAttribute="centerX" id="P6c-6O-Lpu"/>
                             <constraint firstItem="0Zd-vX-QOr" firstAttribute="leading" secondItem="mzz-h5-q6J" secondAttribute="leadingMargin" id="UEf-X2-m1U"/>
                             <constraint firstItem="S5p-5v-KFx" firstAttribute="top" secondItem="dax-gV-hr8" secondAttribute="bottom" constant="59" id="f0f-ym-uDe"/>
-                            <constraint firstItem="S5p-5v-KFx" firstAttribute="leading" secondItem="mzz-h5-q6J" secondAttribute="leadingMargin" constant="91" id="lzD-t7-hPL"/>
+                            <constraint firstItem="S5p-5v-KFx" firstAttribute="leading" secondItem="mzz-h5-q6J" secondAttribute="leadingMargin" constant="55" id="lzD-t7-hPL"/>
                             <constraint firstAttribute="centerX" secondItem="S5p-5v-KFx" secondAttribute="centerX" id="wIJ-hH-vrf"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wIJ-hH-vrf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="composeBleatField" destination="S5p-5v-KFx" id="045-ur-oBE"/>
@@ -203,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaI-qM-gfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289" y="294"/>
+            <point key="canvasLocation" x="1289" y="289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AiI-zJ-T6I">

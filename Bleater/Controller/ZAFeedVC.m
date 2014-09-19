@@ -56,6 +56,8 @@
         
     } failure:^(NSString *error) {
         
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:ALERT_TITLE message:ALERT_MESSAGE delegate:nil cancelButtonTitle:ALERT_CANCEL otherButtonTitles: nil];
+        [errorAlert show];
     }];
 }
 
@@ -63,7 +65,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[ZADataStore singleton].bleatsFRC.sections count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -88,6 +90,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.feedTable cellForRowAtIndexPath:indexPath].selected = NO;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return HEIGHT_FOR_FEED_ROW;
 }
 
 #pragma mark - Fetched Results Controller Methods

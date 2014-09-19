@@ -6,6 +6,11 @@
 //  Copyright (c) 2014 Practice. All rights reserved.
 //
 
+//  BLEAT METHODS
+//
+//  This category adds a little extra functionality to the
+//  Bleat NSManagedSubClass without disrupting the data model.
+
 #import "Bleat.h"
 
 @interface Bleat (Methods)

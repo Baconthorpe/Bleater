@@ -7,11 +7,15 @@
 //
 
 #import "ZABleatCell.h"
+#import "ZAConstants.h"
 
 @interface ZABleatCell ()
 
 // Bleat Content Label
 @property (weak, nonatomic) IBOutlet UILabel *bleatContentLabel;
+
+// Backdrop View
+@property (weak, nonatomic) IBOutlet UILabel *backdropView;
 
 @end
 
@@ -30,6 +34,7 @@
 - (void) configureForContent:(NSString *)content
 {
     self.bleatContentLabel.text = content;
+    [self.backdropView.layer setCornerRadius:BLEAT_BACKDROP_CORNER_RADIUS];
 }
 
 @end

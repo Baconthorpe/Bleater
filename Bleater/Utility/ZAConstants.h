@@ -6,6 +6,12 @@
 //  Copyright (c) 2014 Practice. All rights reserved.
 //
 
+//  CONSTANTS
+//
+//  This class provides a single place to check and edit
+//  all constants in the app. It's useful for tweaking
+//  and avoiding namespace conflicts.
+
 #import <Foundation/Foundation.h>
 
 @interface ZAConstants : NSObject
@@ -36,5 +42,14 @@ extern NSInteger const CLIPPING_INDEX_OF_DATE;
 
 // IB Identifiers
 extern NSString *const BLEAT_CELL_IDENTIFIER;
+
+// UI Constants
+extern float const BLEAT_BACKDROP_CORNER_RADIUS;
+extern float const HEIGHT_FOR_FEED_ROW;
+
+// Alert View Constants
+extern NSString *const ALERT_TITLE;
+extern NSString *const ALERT_MESSAGE;
+extern NSString *const ALERT_CANCEL;
 
 @end

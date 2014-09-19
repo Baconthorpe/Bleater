@@ -6,6 +6,11 @@
 //  Copyright (c) 2014 Practice. All rights reserved.
 //
 
+// DATA STORE
+//
+// This class manages the data stored on the device. It saves
+// and retrieves data.
+
 #import <Foundation/Foundation.h>
 
 @class NSManagedObjectContext;

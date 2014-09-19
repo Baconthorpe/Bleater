@@ -8,6 +8,7 @@
 
 #import "ZAComposeBleatVC.h"
 #import "ZAManager.h"
+#import "ZAConstants.h"
 
 @interface ZAComposeBleatVC () <UITextFieldDelegate>
 
@@ -37,7 +38,7 @@
 {
     self.composeBleatField.delegate = self;
     
-//    [self.composeBleatField becomeFirstResponder];
+    [self.composeBleatField becomeFirstResponder];
 }
 
 #pragma mark - Text Field Delegate Methods
@@ -53,6 +54,9 @@
         }];
         
     } failure:^(NSString *error) {
+        
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:ALERT_TITLE message:ALERT_MESSAGE delegate:nil cancelButtonTitle:ALERT_CANCEL otherButtonTitles: nil];
+        [errorAlert show];
         
         [self dismissViewControllerAnimated:YES completion:^{
             
