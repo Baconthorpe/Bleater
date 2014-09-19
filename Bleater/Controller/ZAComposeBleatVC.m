@@ -1,21 +1,21 @@
 //
-//  ZABleatDetailVC.m
+//  ZAComposeBleatVC.m
 //  Bleater
 //
 //  Created by Ezekiel Abuhoff on 9/18/14.
 //  Copyright (c) 2014 Practice. All rights reserved.
 //
 
-#import "ZABleatDetailVC.h"
+#import "ZAComposeBleatVC.h"
 
-@interface ZABleatDetailVC ()
+@interface ZAComposeBleatVC () <UITextFieldDelegate>
 
-// Bleat Content Label
-@property (weak, nonatomic) IBOutlet UILabel *bleatContentLabel;
+// Compose Bleat Field
+@property (weak, nonatomic) IBOutlet UITextField *composeBleatField;
 
 @end
 
-@implementation ZABleatDetailVC
+@implementation ZAComposeBleatVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

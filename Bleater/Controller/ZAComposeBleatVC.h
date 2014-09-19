@@ -1,5 +1,5 @@
 //
-//  ZABleatCell.h
+//  ZAComposeBleatVC.h
 //  Bleater
 //
 //  Created by Ezekiel Abuhoff on 9/18/14.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZABleatCell : UITableViewCell
-
-// Bleat Text Label
-@property (weak, nonatomic) IBOutlet UILabel *bleatTextLabel;
+@interface ZAComposeBleatVC : UIViewController
 
 @end
