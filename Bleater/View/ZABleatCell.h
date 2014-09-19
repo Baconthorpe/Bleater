@@ -10,7 +10,6 @@
 
 @interface ZABleatCell : UITableViewCell
 
-// Bleat Text Label
-@property (weak, nonatomic) IBOutlet UILabel *bleatTextLabel;
+- (void) configureForContent: (NSString *)content;
 
 @end

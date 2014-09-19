@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ZAParseClient.h"
 
 @interface AppDelegate ()
 
@@ -17,21 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [[ZAParseClient singleton] postBleatWithContent:@"BooP" success:^(NSDictionary *bleatsDictionary) {
-        NSLog(@"Response Object: %@",bleatsDictionary);
-    } failure:^(NSString *error) {
-        
-    }];
-    
-    [[ZAParseClient singleton] getBleatsWithSuccess:^(NSDictionary *bleatsDictionary) {
-        
-        NSLog(@"Response Object: %@",bleatsDictionary);
-        
-    } failure:^(NSString *error) {
-        
-    }];
-    
     // Override point for customization after application launch.
     return YES;
 }

@@ -13,4 +13,11 @@
 // Singleton Method
 + (instancetype) singleton;
 
+// Parse Functionality
+- (void) getAllBleatsAndStoreThemWithSuccess: (void (^)(NSDictionary *))success
+                                     failure: (void (^)(NSString *))failure;
+- (void) postAndStoreBleatWithContent: (NSString *)content
+                              success: (void (^)(NSDictionary *))success
+                              failure: (void (^)(NSString *))failure;
+
 @end

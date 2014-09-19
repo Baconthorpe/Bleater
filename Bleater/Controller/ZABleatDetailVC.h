@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Bleat;
+
 @interface ZABleatDetailVC : UIViewController
+
+@property (strong, nonatomic) Bleat *bleat;
 
 @end

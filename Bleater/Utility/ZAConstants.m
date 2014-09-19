@@ -34,4 +34,7 @@ NSString *const UNIQUE_ID_PREDICATE_FORMAT = @"uniqueID == %@";
 // Manager Constants
 NSInteger const CLIPPING_INDEX_OF_DATE = 10;
 
+// IB Identifiers
+NSString *const BLEAT_CELL_IDENTIFIER = @"bleatCell";
+
 @end

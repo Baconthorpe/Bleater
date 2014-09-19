@@ -42,23 +42,29 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bleatCell" id="vay-TD-0ee" customClass="ZABleatCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bleatCell" id="vQ3-wh-7mS" customClass="ZABleatCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vay-TD-0ee" id="StV-Nm-euD">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vQ3-wh-7mS" id="LAI-aj-d5b">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gma-pp-exq">
-                                                    <rect key="frame" x="8" y="13" width="584" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bleat Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqm-nn-ReY">
+                                                    <rect key="frame" x="8" y="9" width="584" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Lqm-nn-ReY" firstAttribute="trailing" secondItem="LAI-aj-d5b" secondAttribute="trailingMargin" id="QKd-0W-4EG"/>
+                                                <constraint firstItem="Lqm-nn-ReY" firstAttribute="bottom" secondItem="LAI-aj-d5b" secondAttribute="bottomMargin" id="rFJ-Gf-8Bw"/>
+                                                <constraint firstItem="Lqm-nn-ReY" firstAttribute="leading" secondItem="LAI-aj-d5b" secondAttribute="leadingMargin" id="tN5-Uo-G9A"/>
+                                                <constraint firstItem="Lqm-nn-ReY" firstAttribute="top" secondItem="LAI-aj-d5b" secondAttribute="topMargin" constant="1" id="uzh-8H-2H3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bleatTextLabel" destination="gma-pp-exq" id="21Q-AF-h5d"/>
-                                            <segue destination="ZVF-EK-Tz7" kind="show" id="73S-ua-mv0"/>
+                                            <outlet property="bleatContentLabel" destination="Lqm-nn-ReY" id="U5y-Me-L97"/>
+                                            <segue destination="ZVF-EK-Tz7" kind="show" id="chk-SR-YWc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -98,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWv-t6-hWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="285"/>
+            <point key="canvasLocation" x="532" y="290"/>
         </scene>
         <!--Compose BleatVC-->
         <scene sceneID="YGJ-zg-BQT">
@@ -112,13 +118,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5p-5v-KFx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5p-5v-KFx">
                                 <rect key="frame" x="107" y="108" width="386" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4fZ-ST-epK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compose Bleat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dax-gV-hr8">
                                 <rect key="frame" x="232" y="28" width="137" height="21"/>
@@ -130,12 +136,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zd-vX-QOr">
+                                <rect key="frame" x="16" y="24" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Tn-1z-xZz"/>
+                                    <constraint firstAttribute="width" constant="48" id="GVw-u1-Vxa"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="U8T-Na-SIL" eventType="touchUpInside" id="8r1-8c-hFR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0Zd-vX-QOr" firstAttribute="top" secondItem="RC4-8y-mmw" secondAttribute="bottom" constant="4" id="C9c-EY-kXC"/>
                             <constraint firstItem="dax-gV-hr8" firstAttribute="top" secondItem="RC4-8y-mmw" secondAttribute="bottom" constant="8" id="GqU-wG-YRX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S5p-5v-KFx" secondAttribute="trailing" constant="91" id="Hk0-eZ-wnf"/>
                             <constraint firstAttribute="centerX" secondItem="dax-gV-hr8" secondAttribute="centerX" id="P6c-6O-Lpu"/>
+                            <constraint firstItem="0Zd-vX-QOr" firstAttribute="leading" secondItem="mzz-h5-q6J" secondAttribute="leadingMargin" id="UEf-X2-m1U"/>
                             <constraint firstItem="S5p-5v-KFx" firstAttribute="top" secondItem="dax-gV-hr8" secondAttribute="bottom" constant="59" id="f0f-ym-uDe"/>
                             <constraint firstItem="S5p-5v-KFx" firstAttribute="leading" secondItem="mzz-h5-q6J" secondAttribute="leadingMargin" constant="91" id="lzD-t7-hPL"/>
                             <constraint firstAttribute="centerX" secondItem="S5p-5v-KFx" secondAttribute="centerX" id="wIJ-hH-vrf"/>
@@ -182,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaI-qM-gfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="285"/>
+            <point key="canvasLocation" x="1289" y="294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AiI-zJ-T6I">

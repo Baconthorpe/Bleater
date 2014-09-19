@@ -34,4 +34,7 @@ extern NSString *const UNIQUE_ID_PREDICATE_FORMAT;
 // Manager Constants
 extern NSInteger const CLIPPING_INDEX_OF_DATE;
 
+// IB Identifiers
+extern NSString *const BLEAT_CELL_IDENTIFIER;
+
 @end
